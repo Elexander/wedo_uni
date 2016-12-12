@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+	    <meta charset="UTF-8">
+		<title>WeDo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/style.css"/> 
+        <link rel="stylesheet" href="../css/menu.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<link rel="stylesheet" href="css/modal.css"/>
+   
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/functions.js"></script>
+    
+    <!--
+        <link rel="icon" type="image/png" href="../favicon.png">
+    -->
+		<script src="../js/funciones.js"></script>
+		<script src="js/funciones.js"></script>
+		<script src="../js/svg.js"></script>
+		<script>  
+//			if(!sessionStorage.token)
+//			{
+//				window.location = '../index.html';
+//			}
+//			else
+//			{
+//		 		if(!(sessionStorage.tipo == 'DCTR'))
+//				{
+//					window.location = '../index.html';
+//				}
+//			}
+			
+		</script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/highcharts.js"></script>
+	</head>
+	<style>
+          .on{
+	color: #FFA000 !important;
+ }
+     h1{
+         font-size: 2.4em;
+     }
+     .bordr{
+         border: 2px solid white;
+         border-radius: 15px;
+         margin: 0 20%;
+     }
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto;
+    font-size: 3em;
+}
+.navbar {
+  background-color: #1565C0;
+  color: #FFFFFF;
+    margin-bottom: 0 !important;
+}
+a {
+  color: #FFFFFF !important;
+}
+.custom-navbar .hamburger-on-left {
+  float: left;
+}
+.navbar-left li {
+  text-align: left;
+}
+.navbar-right li {
+  text-align: right;
+}
+    </style>
+	<body onload="inicializar();" style="">
+<!--
+        <nav class="navbar custom-navbar" role="navigation">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Áreas</a>
+            </div>
+        </nav>
+-->
+		
+		<div id="principal">
+			<div id="contenedor">
+	           <aside>
+		            <ul class="navigation">
+						<a class="main" href="#url">Estadísticas</a>
+						<li class="n1" ><a href="index.html">Áreas</a></li>
+                        <li class="n4" onclick="abriPerfil();"><a >Perfil</a></li>
+                        <li class="n5" onclick="cerrarSesion()"><a >Salir</a></li>
+					</ul>
+	            </aside>
+	            
+<section id="enmedio" style="background: none;">
+	   <div id="inicio"></div>
+           		<script>
+                    var doc = document.getElementById('enmedio');
+	var doc = document.getElementById('inicio');
+//            function abrirEstadisticas()
+//            {
+
+				$(function () { 
+				var myChart = Highcharts.chart('inicio', {
+					chart: {
+						type: 'bar'
+					},
+					title: {
+						text: 'Humedad y temperatura'
+					},
+					xAxis: {
+						categories: ['Lunes', 'Martes', 'Miercoles','Jueves','Viernes','Sabado','Domingo']
+					},
+					yAxis: {
+						title: {
+							text: 'Lecturas'
+						}
+					},
+					series: [{
+						name: 'Temperatura',
+						data: [18.65, 17.65, 16.65,18.65,0,0,0]
+					}, {
+						name: 'Humedada',
+						data: [78.75, 73.10, 75.10,75.8,0,0,0]
+							}]
+						});
+					});
+		/*}
+	}*/
+
+	/*
+	$(function () { 
+				var myChart = Highcharts.chart('inicio', {
+					chart: {
+						type: 'bar'
+					},
+					title: {
+						text: 'Dispositivos por usuario'
+					},
+					xAxis: {
+						categories: ['X-Light', 'X-Switch', 'X-Sensor','X-Window']
+					},
+					yAxis: {
+						title: {
+							text: 'Valores'
+						}
+					},
+					series: [{
+						name: 'Usuarios',
+						data: [1, 0, 4,2]
+					}]
+				});
+			});*/
+
+    doc.style.width = '80%';
+	doc.style.height = '90%';
+	doc.style.display = 'inline';
+	contenedor.appendChild(doc);
+//}
+        </script>
+
+					
+	            	
+	            </section>
+	            
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		
+		<div id="contactanos" class="modalmask">
+			<div class="modalbox movedown">
+				<a href="#close" title="Cerrar" class="close">X</a>
+		        <div class="header">
+		        	<h1>Cont&aacute;ctanos</h1>
+		        </div>
+		        <div class="copy">
+                 	<div id="errLogin" class="mensajeForm"></div>
+		        	<form id="frmContact" method="POST" name="frmContacto">
+						<label for="asunto">Asunto:</label>
+						<input type="text" id="asunto" required/>
+						<label for="mensaje">Mensaje:</label>
+						<textarea id="msn" name="message" cols="40" rows="6" required> </textarea>
+						<input type="button" onclick="contactar();" class="btn btnEnviar" value="Enviar">			
+					</form>
+		        </div>
+		        <div class="footer">
+		        </div>
+			</div>
+		</div>
+
+	</body>
+</html>

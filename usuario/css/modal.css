@@ -1,0 +1,157 @@
+.center{
+	position:absolute;
+	width:70%;
+	height:300px;
+	top:50%;
+	left:50%;
+	margin-left:-35%;
+	margin-top:-250px;	
+
+}
+.header h1{
+	font-size:20px;
+	color: #OOOOOO;
+}
+
+.modalmask {
+	position:absolute;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalmask:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalbox{
+	width: 27%;
+	position: relative;
+	padding: 15px 0px 0px 0px;
+	background: #FFFFF;/*linear-gradient(to bottom, #f589f0, #f79ff2);*/
+	border-radius: 3px;
+	-webkit-transition: all 500ms ease-in;
+	-moz-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
+	
+}
+
+.modalbox  .header
+{
+	height: 25px;
+	color: #000000;
+	text-align: center;
+}
+
+.modalbox .copy
+{
+    height:  12%;
+	padding: 5% 1% 1% 10%;
+	background:#FFFFFF;	
+	border-radius: 3px 3px 3px 3px;
+}
+.modalbox .copy input[type="text"]
+{
+    height: .8rem;
+    width:inherit;
+	font-size: .8rem;
+    
+}
+
+.movedown {
+    
+    background: #ffffff;
+	margin: 0 auto;
+}
+
+.rotate {
+	margin: 10% auto;
+	-webkit-transform: scale(-5,-5); 
+	transform: scale(-5,-5);
+}
+
+.resize {
+	margin: 10% auto;
+	width:0;
+	height:0;
+
+}
+
+.modalmask:target .movedown{		
+	margin:10% auto;
+}
+.modalmask:target .rotate{		
+	transform: rotate(360deg) scale(1,1);
+    -webkit-transform: rotate(360deg) scale(1,1);
+}
+
+.modalmask:target .resize{
+	width:40%;
+	height:200px;
+}
+
+.close {
+	background: #ffffff;
+	color: #000000;
+	line-height: 25px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	top: 0px;
+	width: 6%	;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius:5px;
+	font-size:16px;
+}
+
+.close:hover { 
+	background: #FFFFFF; 
+	color:#e38826;
+}
+.nsc{
+	position:absolute;
+	bottom:40%;
+	right:0;
+}
+
+@media only screen and (max-width:780px)
+{
+    .modalbox .copy {
+    text-align: center;
+    height:  100%;
+	padding: 0% 0% 0% 0%;
+	background:#ffffff;	
+	border-radius: 3px 3px 3px 3px;}
+    
+}
+input[type="datetime"],
+input[type="text"],
+input[type="email"],
+input[type="number"]
+{
+    display:;
+	height: 5%;
+	padding: 10px 10px;
+	color: #737373;
+	font-family: "merriweather-regular", sans-serif;
+	font-size: .7rem;
+	line-height: 0rem;
+	border-radius: 3px;
+	background: #FFFFFF;
+	max-width: 100%;
+	border: 1px solid #afaeae;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}

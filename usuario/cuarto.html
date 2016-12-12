@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+     <meta charset="UTF-8">
+     <title>Wedo Project</title>
+     <link rel="stylesheet" href="../css/style.css"/> 
+        <link rel="stylesheet" href="../css/menu.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+     <link href="css/bootstrap.css" rel="stylesheet">
+<!--     <link href="css/style.css" rel="stylesheet">-->
+     <script src="js/functions.js"></script>
+     <script src="js/funciones.js"></script>
+     <script src="../js/funciones.js"></script>
+     <link rel="stylesheet" href="css/modal.css">
+
+ </head>
+ <style>
+  .on{
+	color: #FFA000 !important;
+ }
+     h1{
+         font-size: 2.4em;
+     }
+
+ </style>
+ <body style="">
+<!--
+    <nav class="navbar">
+        
+    </nav>
+-->
+     <div id="principal">
+			<div id="contenedor">
+	           <aside>
+		            <ul class="navigation">
+						<a class="main" href="#url">Dispositivos</a>
+						<li class="n3" onclick=""><a href="estadisticas.html">Estadísticas</a></li>
+						<li class="n1" ><a href="index.html" >Áreas</a></li>
+						<li class="n1" onclick="abrirModal('buscarDispositivo');"><a >Agregar</a></li>
+						
+<!--
+                        <li class="n4" onclick="abriPerfil();"><a >Perfil</a></li>
+                        <li class="n5" onclick="cerrarSesion()"><a >Salir</a></li>
+-->
+					</ul>
+	            </aside>
+	            <section id="enmedio">
+     <div class="container">
+         <h1 class="off cntr">Sistema de control</h1>
+         <div class="bordr row cntr">
+             <div class="col-sm-12 mg-20">
+                
+                 <span data-v="1" id="lamp" onclick="acccionarFoco();" class="glyphicon glyphicon-lamp big-fs off cursor"></span> 
+             </div>
+             <div class="col-sm-12 mg-20">
+<!--
+               <div class="big-fs off cursor">
+                   <img id="tv" src="icons/blind.svg" class="" onclick="acccionarFoco();" alt="">
+               </div>
+-->
+                 <span data-v="2" id="tv" onclick="acccionarFoco2();" class="icon-display big-fs off cursor"></span>
+             </div>
+             <div id="foco" class="col-sm-12 mg-20">
+
+             </div>
+             <!--                 <span data-v="3" id="cd" onclick="acccionarFoco3();" class="icon-power-cord big-fs off cursor"></span>-->
+<!--
+             <div id="foco" class="col-sm-12 mg-20">
+                 
+             </div>
+-->
+         </div>
+     </div>
+                </section>
+                
+         </div>
+         
+     </div>
+     <div id="buscarDispositivo" class="modalmask">
+		    <div class="modalbox movedown">
+		        <a href="#close" title="cerrar" class="close">X</a>
+		        <div class="header">
+                    <h1>Ingrese código para agregar<br> dispositivo :</h1>
+				</div>
+	            <div class="copy">
+                	<div id="errBuscarPaciente" class="mensajeForm"></div>
+	            		<form id="frmBuscarPaciente" method="GET"  name="frmBuscarPaciente">
+	            			<label for="Folio">Folio:</label>
+							<input type="text" name="txtFolio" id="txtFolio" />
+							<input type="button" onclick="buscarDispositivo();" value="Agregar" class="btn btnEnviar" />
+	            		</form>
+	            	</div>
+	           	
+		    </div>
+		</div>
+     
+ </body>
+ </html>

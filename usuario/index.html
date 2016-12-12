@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+	    <meta charset="UTF-8">
+		<title>WeDo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/style.css"/> 
+        <link rel="stylesheet" href="../css/menu.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<link rel="stylesheet" href="css/modal.css"/>
+   
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/functions.js"></script>
+    
+    <!--
+        <link rel="icon" type="image/png" href="../favicon.png">
+    -->
+		<script src="../js/funciones.js"></script>
+		<script src="js/funciones.js"></script>
+		<script src="../js/svg.js"></script>
+		<script>
+//			if(!sessionStorage.token)
+//			{
+//				window.location = '../index.html';
+//			}
+//			else
+//			{
+//		 		if(!(sessionStorage.tipo == 'DCTR'))
+//				{
+//					window.location = '../index.html';
+//				}
+//			}
+			
+		</script>
+	</head>
+	<style>
+          .on{
+	color: #FFA000 !important;
+ }
+     h1{
+         font-size: 2.4em;
+     }
+     .bordr{
+         border: 2px solid white;
+         border-radius: 15px;
+         margin: 0 20%;
+     }
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto;
+    font-size: 3em;
+}
+.navbar {
+  background-color: #1565C0;
+  color: #FFFFFF;
+    margin-bottom: 0 !important;
+}
+a {
+  color: #FFFFFF !important;
+}
+.custom-navbar .hamburger-on-left {
+  float: left;
+}
+.navbar-left li {
+  text-align: left;
+}
+.navbar-right li {
+  text-align: right;
+}
+    </style>
+	<body onload="inicializar();" style="">
+<!--
+        <nav class="navbar custom-navbar" role="navigation">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Áreas</a>
+            </div>
+        </nav>
+-->
+		
+		<div id="principal">
+			<div id="contenedor">
+	           <aside>
+		            <ul class="navigation">
+						<a class="main" href="#url">Áreas</a>
+						<li class="n3" onclick=""><a href="estadisticas.html">Estadísticas</a></li>
+                        <li class="n4" onclick="abriPerfil();"><a >Perfil</a></li>
+                        <li class="n5" onclick="cerrarSesion()"><a >Salir</a></li>
+					</ul>
+	            </aside>
+	            
+<section id="enmedio" style="background: none;">
+	   <div class="" >
+         <div class="row cntr">
+          <div class="col-md-1"></div>
+           <div class="col-md-4" style="">
+               <h1 class="off cntr">Cuarto</h1>
+               <div class="col-sm-12  mg-20"> 
+                   <a href="cuarto.html"><span data-v="1" id="lamp" class="glyphicon glyphicon-bed big-fs off cursor"></span></a>
+               </div>
+           </div>
+           <div class="col-md-1"></div>
+<!--
+            <div class="col-md-4" style="">
+               <h1 class="off cntr">Cocina</h1>
+               <div class="col-sm-12  mg-20"> 
+                 <span data-v="1" id="lamp" class="glyphicon glyphicon-cutlery big-fs off cursor"></span>
+               </div>
+           </div>
+-->
+         </div>
+         <p></p>
+          <div class="row cntr">
+<!--
+          <div class="col-md-1"></div>
+           <div class="col-md-4" style="">
+               <h1 class="off cntr">Agregar</h1>
+               <div class="col-sm-12  mg-20"> 
+                <a href="#"><span data-v="1" id="lamp" class="glyphicon glyphicon-plus-sign big-fs off cursor"></span> </a>
+               </div>
+           </div>
+           <div class="col-md-1"></div>
+-->
+            
+         </div>
+     </div>		
+	            	
+	            </section>
+	            
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		<div id="buscarDispositivo" class="modalmask">
+		    <div class="modalbox movedown">
+		        <a href="#close" title="cerrar" class="close">X</a>
+		        <div class="header">
+	            	<h1>Resultados :</h1>
+				</div>
+	            <div class="copy">
+                	<div id="errBuscarPaciente" class="mensajeForm"></div>
+	            		<form id="frmBuscarPaciente" method="GET"  name="frmBuscarPaciente">
+	            			<label for="Folio">Folio:</label>
+							<input type="text" name="txtFolio" id="txtFolio" />
+							<input type="button" onclick="buscarDispositivo();" value="Buscar" class="btn btnEnviar" />
+	            		</form>
+	            	</div>
+	           	<div class="footer">
+	          	</div>
+		    </div>
+		</div>
+		
+		<div id="contactanos" class="modalmask">
+			<div class="modalbox movedown">
+				<a href="#close" title="Cerrar" class="close">X</a>
+		        <div class="header">
+		        	<h1>Cont&aacute;ctanos</h1>
+		        </div>
+		        <div class="copy">
+                 	<div id="errLogin" class="mensajeForm"></div>
+		        	<form id="frmContact" method="POST" name="frmContacto">
+						<label for="asunto">Asunto:</label>
+						<input type="text" id="asunto" required/>
+						<label for="mensaje">Mensaje:</label>
+						<textarea id="msn" name="message" cols="40" rows="6" required> </textarea>
+						<input type="button" onclick="contactar();" class="btn btnEnviar" value="Enviar">			
+					</form>
+		        </div>
+		        <div class="footer">
+		        </div>
+			</div>
+		</div>
+		
+	</body>
+</html>

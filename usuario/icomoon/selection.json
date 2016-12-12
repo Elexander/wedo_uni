@@ -1,0 +1,96 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M0 64v640h1024v-640h-1024zM960 640h-896v-512h896v512zM672 768h-320l-32 128-64 64h512l-64-64z"
+				],
+				"tags": [
+					"display",
+					"screen",
+					"monitor",
+					"computer",
+					"desktop",
+					"pc"
+				],
+				"defaultCode": 59734,
+				"grid": 16,
+				"attrs": []
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "display, screen",
+				"name": "display",
+				"order": 2,
+				"id": 87,
+				"prevSize": 32,
+				"code": 59734
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 86
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 282.5l-90.506-90.5-178.746 178.752-101.5-101.502 178.75-178.75-90.5-90.5-178.75 178.75-114.748-114.75-86.626 86.624 512.002 512 86.624-86.622-114.752-114.752 178.752-178.75z",
+					"M794.040 673.79l-443.824-443.824c-95.818 114.904-204.52 292.454-129.396 445.216l-132.248 132.248c-31.112 31.114-31.112 82.024 0 113.136l14.858 14.858c31.114 31.114 82.026 31.114 113.138 0l132.246-132.244c152.764 75.132 330.318-33.566 445.226-129.39z"
+				],
+				"tags": [
+					"power-cord",
+					"plugin",
+					"extension"
+				],
+				"defaultCode": 59831,
+				"grid": 16,
+				"attrs": []
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "power-cord, plugin",
+				"name": "power-cord",
+				"order": 4,
+				"id": 184,
+				"prevSize": 32,
+				"code": 59831
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 183
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16
+	}
+}
